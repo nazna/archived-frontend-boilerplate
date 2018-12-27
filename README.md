@@ -1,5 +1,4 @@
 <div align="center">
-  <img src="public/logo.png" alt="frontend-boilerplate" />
   <h1 align="center">
     Frontend Boilerplate
   </h1>
@@ -13,6 +12,6 @@
     <img src="https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square" alt="code style: prettier" />
   </a>
   <a href="http://commitizen.github.io/cz-cli">
-    <img src="https://img.shields.io/badge/commitizen-friendly-brightgreen.svg" alt="commitizen: friendly" />
+    <img src="https://img.shields.io/badge/commitizen-friendly-brightgreen.svg?style=flat-square" alt="commitizen: friendly" />
   </a>
 </p>
