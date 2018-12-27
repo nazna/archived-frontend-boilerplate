@@ -5,6 +5,9 @@
   <br />
 </div>
 <p align="center">
+  <a href="https://circleci.com/gh/naoya3e/frontend-boilerplate">
+    <img src="https://img.shields.io/circleci/project/github/naoya3e/frontend-boilerplate/master.svg?style=flat-square" alt="build: status" />
+  </a>
   <a href="https://github.com/Microsoft/TypeScript">
     <img src="https://img.shields.io/badge/powered%20by-TypeScript-152740.svg?style=flat-square" alt="powered by: TypeScript" />
   </a>
