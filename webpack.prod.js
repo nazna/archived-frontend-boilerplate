@@ -47,7 +47,7 @@ module.exports = {
     }),
     new css(),
     new webapp({
-      logo: path.resolve(__dirname, 'public', 'logo.svg'),
+      logo: path.resolve(__dirname, 'public', 'logo.png'),
       favicons: {
         lang: 'ja',
         background: '#2e3440',
