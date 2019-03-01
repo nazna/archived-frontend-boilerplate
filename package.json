@@ -59,7 +59,7 @@
     "webapp-webpack-plugin": "2.6.0",
     "webpack": "4.29.6",
     "webpack-cli": "3.2.3",
-    "webpack-dev-server": "3.2.0"
+    "webpack-dev-server": "3.2.1"
   },
   "author": {
     "name": "Naoya Yamashita",
