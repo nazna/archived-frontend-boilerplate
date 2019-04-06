@@ -39,7 +39,7 @@
     "@types/react": "16.8.12",
     "@types/react-dom": "16.8.3",
     "@types/webpack": "4.4.27",
-    "@types/webpack-dev-server": "3.1.4",
+    "@types/webpack-dev-server": "3.1.5",
     "babel-loader": "8.0.4",
     "babel-plugin-emotion": "10.0.9",
     "clean-webpack-plugin": "1.0.1",
