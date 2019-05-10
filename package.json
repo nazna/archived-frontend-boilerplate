@@ -38,7 +38,7 @@
     "@types/prettier": "1.16.3",
     "@types/react": "16.8.17",
     "@types/react-dom": "16.8.4",
-    "@types/webpack": "4.4.30",
+    "@types/webpack": "4.4.31",
     "@types/webpack-dev-server": "3.1.5",
     "babel-loader": "8.0.4",
     "babel-plugin-emotion": "10.0.9",
@@ -57,7 +57,7 @@
     "typescript": "3.4.5",
     "typesync": "0.5.1",
     "webapp-webpack-plugin": "2.7.0",
-    "webpack": "4.30.0",
+    "webpack": "4.31.0",
     "webpack-cli": "3.3.2",
     "webpack-dev-server": "3.3.1"
   },
