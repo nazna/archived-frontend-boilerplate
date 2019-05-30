@@ -7,10 +7,10 @@ const webapp = require('webapp-webpack-plugin')
 
 module.exports = {
   mode: 'production',
-  entry: path.resolve(__dirname, 'src'),
+  entry: './src/index.tsx',
   output: {
-    filename: '[name]-[contenthash].bundle.js',
-    path: path.resolve(__dirname, 'dist'),
+    filename: 'bundle.js',
+    path: path.resolve(__dirname, 'build'),
     publicPath: '/'
   },
   resolve: {
@@ -39,7 +39,7 @@ module.exports = {
     }
   },
   plugins: [
-    new clean([path.resolve(__dirname, 'dist')]),
+    new clean(),
     new html({
       title: '<project_name>',
       meta: { description: '<project_description>' },

@@ -4,10 +4,10 @@ const css = require('mini-css-extract-plugin')
 
 module.exports = {
   mode: 'development',
-  devtool: '#eval-cheap-module-source-map',
-  entry: path.resolve(__dirname, 'src'),
+  devtool: 'inline-source-map',
+  entry: './src/index.tsx',
   output: {
-    filename: '[name].bundle.js',
+    filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
     publicPath: '/'
   },
