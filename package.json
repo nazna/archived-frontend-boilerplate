@@ -57,7 +57,7 @@
     "typescript": "3.6.2",
     "typesync": "0.6.1",
     "webapp-webpack-plugin": "2.7.1",
-    "webpack": "4.39.2",
+    "webpack": "4.39.3",
     "webpack-cli": "3.3.7",
     "webpack-dev-server": "3.8.0"
   },
