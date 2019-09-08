@@ -1,62 +1,67 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
+
 const path = require('path')
-const html = require('html-webpack-plugin')
+const { CleanWebpackPlugin: clean } = require('clean-webpack-plugin')
+const dotenv = require('dotenv-webpack')
 const copy = require('copy-webpack-plugin')
-const clean = require('clean-webpack-plugin')
+const html = require('html-webpack-plugin')
 const css = require('mini-css-extract-plugin')
-const webapp = require('webapp-webpack-plugin')
+
+/* @type import('webpack').Configuration */
 
 module.exports = {
   mode: 'production',
-  entry: './src/index.tsx',
+  entry: path.resolve(__dirname, 'src'),
   output: {
-    filename: 'bundle.js',
-    path: path.resolve(__dirname, 'build'),
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'static/js/[name]-[contenthash].js',
     publicPath: '/'
   },
   resolve: {
-    extensions: ['.ts', '.tsx', '.mjs', '.js', '.jsx', '.json']
-  },
-  module: {
-    rules: [
-      {
-        use: 'babel-loader',
-        test: /\.(ts|tsx|js|jsx)$/,
-        exclude: /node_modules/
-      },
-      {
-        use: [css.loader, 'css-loader'],
-        test: /\.css$/
-      },
-      {
-        use: 'file-loader',
-        test: /\.(png|jpg|jpeg|gif|svg|ttf|otf|woff)$/
-      }
-    ]
+    extensions: ['.tsx', '.ts', '.js']
   },
   optimization: {
+    minimize: true,
     splitChunks: {
       chunks: 'all'
     }
   },
-  plugins: [
-    new clean(),
-    new html({
-      title: '<project_name>',
-      meta: { description: '<project_description>' },
-      template: path.resolve(__dirname, 'src', 'template.html')
-    }),
-    new css(),
-    new webapp({
-      logo: path.resolve(__dirname, 'public', 'logo.png'),
-      favicons: {
-        lang: 'ja',
-        background: '#2e3440',
-        theme_color: '#2e3440',
-        icons: {
-          coast: false,
-          yandex: false
-        }
+  module: {
+    rules: [
+      {
+        use: [{ loader: 'babel-loader' }],
+        test: /\.(tsx|ts|js)$/i,
+        exclude: /node_modules/
+      },
+      {
+        use: [{ loader: css.loader }, { loader: 'css-loader', options: { sourceMap: false } }],
+        test: /\.css$/i
+      },
+      {
+        use: [{ loader: 'file-loader', options: { outputPath: 'static/images' } }],
+        test: /\.(png|jpg|jpeg|gif|svg)$/i
+      },
+      {
+        use: [{ loader: 'file-loader', options: { outputPath: 'static/fonts' } }],
+        test: /\.(ttf|otf|woff|woff2)$/i
       }
+    ]
+  },
+  plugins: [
+    new dotenv(),
+    new clean(),
+    new copy([
+      {
+        from: path.resolve(__dirname, 'static'),
+        to: path.resolve(__dirname, 'dist/static')
+      }
+    ]),
+    new html({
+      template: path.resolve(__dirname, 'src/index.html')
+    }),
+    new css({
+      filename: 'static/css/[name].css',
+      chunkFilename: 'static/css/[id].css'
     })
   ]
 }

@@ -1,26 +1,21 @@
-# general
-.DS_Store
-
-# logs
-npm-debug.log*
-firebase-debug.log*
-
-# tests
-coverage/
-
 # dependencies
-node_modules/
+node_modules
 
-# dotenv
-.env
+# production
+dist
+
+# testing
+coverage
 
 # firebase
-.firebase/
+.firebase
 .firebaserc
-firebase.json
-firestore.rules
-firestore.indexes.json
-storage.rules
 
-# build
-build/
+# misc
+.DS_Store
+.env
+
+# npm
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

@@ -1,0 +1,63 @@
+{
+  "root": true,
+  "env": {
+    "es6": true,
+    "node": true,
+    "browser": true,
+    "jest/globals": true
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": { "jsx": true },
+    "sourceType": "module"
+  },
+  "plugins": [
+    "jest",
+    "react",
+    "compat",
+    "import",
+    "unicorn",
+    "prettier",
+    "security",
+    "react-hooks",
+    "@typescript-eslint"
+  ],
+  "extends": [
+    "eslint:recommended",
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "plugin:import/typescript",
+    "plugin:jest/recommended",
+    "plugin:react/recommended",
+    "plugin:compat/recommended",
+    "plugin:unicorn/recommended",
+    "plugin:prettier/recommended",
+    "plugin:security/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "prettier/react",
+    "prettier/unicorn",
+    "prettier/@typescript-eslint"
+  ],
+  "rules": {
+    "prefer-const": "error",
+    "react/prop-types": "off",
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "unicorn/prevent-abbreviations": "off",
+    "@typescript-eslint/prefer-interface": "off",
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/explicit-member-accessibility": "off"
+  },
+  "settings": {
+    "import/parsers": {
+      "@typescript-eslint/parser": [
+        ".tsx",
+        ".ts"
+      ]
+    },
+    "react": {
+      "version": "detect"
+    }
+  }
+}

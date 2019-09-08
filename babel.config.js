@@ -1,30 +1,18 @@
-module.exports = function(api) {
-  api.cache.using(() => process.env.NODE_ENV)
-
-  const env = {
-    development: {
-      plugins: [[ 'emotion', { sourceMap: true, autoLabel: true } ]]
-    },
-    production: {
-      plugins: [[ 'emotion', { hoist: true } ]]
-    }
-  }
+module.exports = api => {
+  api.cache(true)
 
   const presets = [
-    ['@babel/preset-env', { useBuiltIns: 'usage', corejs: 3 }],
-    '@babel/preset-react',
-    '@babel/preset-typescript'
+    ['@babel/preset-env', { targets: 'last 1 chrome version', useBuiltIns: 'usage', corejs: 3 }],
+    ['@babel/preset-react'],
+    ['@babel/preset-typescript'],
+    ['@emotion/babel-preset-css-prop']
   ]
 
   const plugins = [
-    '@babel/plugin-proposal-class-properties',
-    '@babel/plugin-proposal-object-rest-spread',
-    '@babel/plugin-proposal-optional-chaining'
+    ['@babel/plugin-proposal-class-properties'],
+    ['@babel/plugin-proposal-object-rest-spread'],
+    ['@loadable/babel-plugin']
   ]
 
-  return {
-    env,
-    presets,
-    plugins
-  }
+  return { presets, plugins }
 }

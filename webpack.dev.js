@@ -1,48 +1,67 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
+
 const path = require('path')
+const dotenv = require('dotenv-webpack')
+const copy = require('copy-webpack-plugin')
 const html = require('html-webpack-plugin')
 const css = require('mini-css-extract-plugin')
 
+/* @type import('webpack').Configuration */
+
 module.exports = {
   mode: 'development',
+  stats: 'errors-warnings',
   devtool: 'inline-source-map',
-  entry: './src/index.tsx',
+  entry: path.resolve(__dirname, 'src'),
   output: {
-    filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
+    filename: 'static/js/[name].js',
     publicPath: '/'
   },
   resolve: {
-    extensions: ['.ts', '.tsx', '.mjs', '.js', '.jsx', '.json']
+    extensions: ['.tsx', '.ts', '.js']
   },
   module: {
     rules: [
       {
-        use: 'babel-loader',
-        test: /\.(ts|tsx|js|jsx)$/,
+        use: [{ loader: 'babel-loader' }],
+        test: /\.(tsx|ts|js)$/i,
         exclude: /node_modules/
       },
       {
-        use: [css.loader, 'css-loader'],
-        test: /\.css$/
+        use: [{ loader: css.loader }, { loader: 'css-loader', options: { sourceMap: true } }],
+        test: /\.css$/i
       },
       {
-        use: 'file-loader',
-        test: /\.(png|jpg|jpeg|gif|svg|ttf|otf|woff)$/
+        use: [{ loader: 'file-loader', options: { outputPath: 'static/images' } }],
+        test: /\.(png|jpg|jpeg|gif|svg)$/i
+      },
+      {
+        use: [{ loader: 'file-loader', options: { outputPath: 'static/fonts' } }],
+        test: /\.(ttf|otf|woff|woff2)$/i
       }
     ]
   },
   plugins: [
+    new dotenv(),
+    new copy([
+      {
+        from: path.resolve(__dirname, 'static'),
+        to: path.resolve(__dirname, 'dist/static')
+      }
+    ]),
     new html({
-      title: '<project_name>',
-      meta: { description: '<project_description>' },
-      template: path.resolve(__dirname, 'src', 'template.html')
+      template: path.resolve(__dirname, 'src/index.html')
     }),
-    new css()
+    new css({
+      filename: 'static/css/[name].css',
+      chunkFilename: 'static/css/[id].css'
+    })
   ],
   devServer: {
+    contentBase: path.resolve(__dirname, 'static'),
+    historyApiFallback: true,
     port: 3000,
-    open: false,
-    stats: 'errors-only',
-    historyApiFallback: true
+    watchContentBase: true
   }
 }
