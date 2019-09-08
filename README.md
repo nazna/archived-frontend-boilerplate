@@ -1,20 +1,16 @@
 <div align="center">
-  <h1 align="center">
-    Frontend Boilerplate
-  </h1>
-  <br />
+  <h1 align="center">fontend-boilerplate</h1>
+  <sup align="center">A boilerplate for Web frontend development</sup>
 </div>
-<p align="center">
-  <a href="https://circleci.com/gh/naoya3e/frontend-boilerplate">
-    <img src="https://img.shields.io/circleci/project/github/naoya3e/frontend-boilerplate/master.svg?style=flat-square" alt="build: status" />
-  </a>
-  <a href="https://github.com/Microsoft/TypeScript">
-    <img src="https://img.shields.io/badge/powered%20by-TypeScript-152740.svg?style=flat-square" alt="powered by: TypeScript" />
-  </a>
-  <a href="https://github.com/prettier/prettier">
-    <img src="https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square" alt="code style: prettier" />
-  </a>
-  <a href="http://commitizen.github.io/cz-cli">
-    <img src="https://img.shields.io/badge/commitizen-friendly-brightgreen.svg?style=flat-square" alt="commitizen: friendly" />
-  </a>
-</p>
+
+## Install
+
+```sh
+npm install
+```
+
+## Usage
+
+```sh
+npm run start
+```
