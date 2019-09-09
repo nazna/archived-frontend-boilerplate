@@ -6,7 +6,7 @@ export const toggle = createEvent<Todo['id']>()
 const initialState: TodoData = [
   {
     id: 0,
-    text: 'I wanna astronaut',
+    text: 'I wanna be an astronaut',
     completed: false
   },
   {
