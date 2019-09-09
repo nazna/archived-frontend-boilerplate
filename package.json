@@ -1,7 +1,7 @@
 {
   "private": true,
   "license": "MIT",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "main": "package.json",
   "name": "frontend-boilerplate",
   "description": "A boilerplate for Web frontend development",

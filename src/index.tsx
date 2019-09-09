@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react'
 import { render } from 'react-dom'
-import loadable from '@loadable/component'
 import { Switch, Route } from 'wouter'
+import loadable from '@loadable/component'
 import { AppBar } from './components/modules/app-bar'
 import { GlobalStyles } from './components/abstracts/global-styles'
 import { ErrorBoundary } from './components/abstracts/error-boundary'
