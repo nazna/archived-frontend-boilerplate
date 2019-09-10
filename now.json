@@ -1,0 +1,27 @@
+{
+  "version": 2,
+  "name": "frontend-boilerplate",
+  "alias": "febp.now.sh",
+  "regions": ["hnd1"],
+  "github": {
+    "silent": true
+  },
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@now/static-build"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/static/(.*)",
+      "headers": { "cache-control": "immutable, s-maxage=31536000" },
+      "dest": "/static/$1"
+    },
+    {
+      "src": "/(.*)",
+      "headers": { "cache-control": "s-maxage=0" },
+      "dest": "/index.html"
+    }
+  ]
+}

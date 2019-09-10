@@ -14,3 +14,9 @@ npm install
 ```sh
 npm run start
 ```
+
+## Demo
+
+[frontend-boilerplate](https://febp.now.sh/)
+
+This project is running on Zeit Now.
