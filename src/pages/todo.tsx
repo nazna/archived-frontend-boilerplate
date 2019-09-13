@@ -5,7 +5,7 @@ import { PageHeader } from '../components/abstracts/page-header'
 import { TodoItem } from '../components/modules/todo-item'
 import { todoStore } from '../store/todo'
 
-const Todo = () => {
+export default function Todo() {
   const todos = useStore(todoStore)
 
   return (
@@ -19,5 +19,3 @@ const Todo = () => {
     </React.Fragment>
   )
 }
-
-export default Todo

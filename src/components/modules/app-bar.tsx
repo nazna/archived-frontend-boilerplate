@@ -2,7 +2,7 @@ import React from 'react'
 import styled from '@emotion/styled'
 import { Link } from 'wouter'
 
-export const AppBar = () => {
+export function AppBar() {
   return (
     <Container>
       <div>{process.env.PROJECT_NAME}</div>

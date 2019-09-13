@@ -2,7 +2,7 @@ import React from 'react'
 import { PageBody } from '../components/abstracts/page-body'
 import { PageHeader } from '../components/abstracts/page-header'
 
-const Home = () => {
+export default function Home() {
   return (
     <React.Fragment>
       <PageHeader>Home</PageHeader>
@@ -10,5 +10,3 @@ const Home = () => {
     </React.Fragment>
   )
 }
-
-export default Home

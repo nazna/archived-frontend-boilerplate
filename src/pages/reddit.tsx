@@ -2,7 +2,7 @@ import React from 'react'
 import { PageBody } from '../components/abstracts/page-body'
 import { PageHeader } from '../components/abstracts/page-header'
 
-const Reddit = () => {
+export default function Reddit() {
   return (
     <React.Fragment>
       <PageHeader>Reddit</PageHeader>
@@ -10,5 +10,3 @@ const Reddit = () => {
     </React.Fragment>
   )
 }
-
-export default Reddit

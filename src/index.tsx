@@ -10,7 +10,7 @@ const Home = loadable(() => import(/* webpackPreload: true */ './pages/home'))
 const Reddit = loadable(() => import(/* webpackPreload: true */ './pages/reddit'))
 const Todo = loadable(() => import(/* webpackPreload: true */ './pages/todo'))
 
-const App = () => {
+function App() {
   return (
     <Fragment>
       <GlobalStyles />

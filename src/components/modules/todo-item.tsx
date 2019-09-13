@@ -6,13 +6,13 @@ type Props = {
   todo: Todo
 }
 
-export const TodoItem: React.FC<Props> = ({ todo }) => {
-  const handleToggle = () => toggle(todo.id)
+export function TodoItem(props: Props) {
+  const handleToggle = () => toggle(props.todo.id)
 
   return (
     <Container>
-      <Checkbox type="checkbox" checked={todo.completed} onChange={handleToggle} />
-      <Text completed={todo.completed}>{todo.text}</Text>
+      <Checkbox type="checkbox" checked={props.todo.completed} onChange={handleToggle} />
+      <Text completed={props.todo.completed}>{props.todo.text}</Text>
     </Container>
   )
 }
