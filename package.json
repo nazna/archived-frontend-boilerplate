@@ -20,7 +20,7 @@
   "dependencies": {
     "@emotion/core": "^10.0.17",
     "@emotion/styled": "^10.0.17",
-    "@loadable/component": "^5.10.2",
+    "@loadable/component": "^5.10.3",
     "effector": "^20.2.1",
     "effector-react": "^20.3.0",
     "react": "^16.9.0",
