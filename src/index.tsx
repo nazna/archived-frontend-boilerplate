@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react'
 import { render } from 'react-dom'
-import { Switch, Route } from 'wouter'
+import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import loadable from '@loadable/component'
 import { AppBar } from './components/modules/app-bar'
 import { GlobalStyles } from './components/abstracts/global-styles'
@@ -15,12 +15,14 @@ function App() {
     <Fragment>
       <GlobalStyles />
       <ErrorBoundary>
-        <AppBar />
-        <Switch>
-          <Route path="/" component={Home} />
-          <Route path="/reddit" component={Reddit} />
-          <Route path="/todo" component={Todo} />
-        </Switch>
+        <BrowserRouter>
+          <AppBar />
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route exact path="/reddit" component={Reddit} />
+            <Route exact path="/todo" component={Todo} />
+          </Switch>
+        </BrowserRouter>
       </ErrorBoundary>
     </Fragment>
   )
