@@ -1,14 +1,14 @@
 import React from 'react'
 import styled from '@emotion/styled'
-import { Link } from 'wouter'
+import { Link } from 'react-router-dom'
 
 export function AppBar() {
   return (
     <Container>
       <div>{process.env.PROJECT_NAME}</div>
-      <Link href="/">Home</Link>
-      <Link href="/todo">Todo</Link>
-      <Link href="/reddit">Reddit</Link>
+      <Link to="/">Home</Link>
+      <Link to="/todo">Todo</Link>
+      <Link to="/reddit">Reddit</Link>
     </Container>
   )
 }
