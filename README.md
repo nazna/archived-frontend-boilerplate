@@ -1,5 +1,5 @@
 <div align="center">
-  <h1 align="center">fontend-boilerplate</h1>
+  <h1 align="center">frontend-boilerplate</h1>
   <sup align="center">A boilerplate for Web frontend development</sup>
 </div>
 
