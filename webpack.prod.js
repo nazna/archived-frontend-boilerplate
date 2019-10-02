@@ -39,7 +39,7 @@ module.exports = {
       },
       {
         use: [{ loader: 'file-loader', options: { outputPath: 'static/images' } }],
-        test: /\.(png|jpg|jpeg|gif|svg)$/i
+        test: /\.(png|jpg|jpeg|gif|svg|webp)$/i
       },
       {
         use: [{ loader: 'file-loader', options: { outputPath: 'static/fonts' } }],
