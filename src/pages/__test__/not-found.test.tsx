@@ -1,13 +1,13 @@
 import React from 'react'
 import { render } from '@testing-library/react'
 import { MemoryRouter } from 'react-router-dom'
-import Home from '../home'
+import NotFound from '../not-found'
 
 describe('pages', () => {
-  test('<Home />', () => {
+  test('<NotFound />', () => {
     const rendered = render(
       <MemoryRouter>
-        <Home />
+        <NotFound />
       </MemoryRouter>
     )
     expect(rendered).toBeTruthy()

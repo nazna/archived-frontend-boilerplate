@@ -1,13 +1,13 @@
 import React from 'react'
 import { render } from '@testing-library/react'
 import { MemoryRouter } from 'react-router-dom'
-import Home from '../home'
+import Todo from '../todo'
 
 describe('pages', () => {
-  test('<Home />', () => {
+  test('<Todo />', () => {
     const rendered = render(
       <MemoryRouter>
-        <Home />
+        <Todo />
       </MemoryRouter>
     )
     expect(rendered).toBeTruthy()

@@ -1,13 +1,13 @@
 import React from 'react'
 import { render } from '@testing-library/react'
 import { MemoryRouter } from 'react-router-dom'
-import Home from '../home'
+import Reddit from '../reddit'
 
 describe('pages', () => {
-  test('<Home />', () => {
+  test('<Reddit />', () => {
     const rendered = render(
       <MemoryRouter>
-        <Home />
+        <Reddit />
       </MemoryRouter>
     )
     expect(rendered).toBeTruthy()
