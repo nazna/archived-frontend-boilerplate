@@ -23,7 +23,7 @@
     "@loadable/component": "^5.10.3",
     "effector": "^20.3.0",
     "effector-react": "^20.4.0",
-    "react": "^16.10.1",
+    "react": "^16.10.2",
     "react-dom": "^16.10.2",
     "react-router-dom": "^5.1.2"
   },
