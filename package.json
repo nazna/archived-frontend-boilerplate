@@ -21,7 +21,7 @@
     "@emotion/core": "^10.0.21",
     "@emotion/styled": "^10.0.17",
     "@loadable/component": "^5.10.3",
-    "effector": "^20.4.0",
+    "effector": "^20.4.2",
     "effector-react": "^20.4.0",
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
