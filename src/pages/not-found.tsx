@@ -9,7 +9,7 @@ export default function NotFound() {
       <PageHeader>NotFound</PageHeader>
       <PageBody>
         <Container>
-          <Image src="/static/images/404.webp" />
+          <Image src="/images/404.webp" />
           <Message>404</Message>
           <Copyright>
             Photo by <a href="https://unsplash.com/@miklevasilyev">Mikhail Vasilyev</a> on{' '}

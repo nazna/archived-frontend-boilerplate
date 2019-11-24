@@ -2,10 +2,9 @@ module.exports = api => {
   api.cache(true)
 
   const presets = [
-    ['@babel/preset-env', { targets: 'last 1 chrome version', useBuiltIns: 'usage', corejs: 3 }],
+    ['@babel/preset-env', { corejs: 3, targets: { esmodules: true }, useBuiltIns: 'usage' }],
     ['@babel/preset-react'],
-    ['@babel/preset-typescript'],
-    ['@emotion/babel-preset-css-prop']
+    ['@babel/preset-typescript']
   ]
 
   const plugins = [

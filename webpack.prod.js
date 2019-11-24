@@ -2,10 +2,10 @@
 
 const path = require('path')
 const { CleanWebpackPlugin: clean } = require('clean-webpack-plugin')
-const dotenv = require('dotenv-webpack')
 const copy = require('copy-webpack-plugin')
+const dotenv = require('dotenv-webpack')
 const html = require('html-webpack-plugin')
-const css = require('mini-css-extract-plugin')
+const extract = require('mini-css-extract-plugin')
 
 /* @type import('webpack').Configuration */
 
@@ -14,54 +14,52 @@ module.exports = {
   entry: path.resolve(__dirname, 'src'),
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'static/js/[name]-[contenthash].js',
+    filename: 'js/[name]-[contenthash].js',
     publicPath: '/'
   },
   resolve: {
-    extensions: ['.tsx', '.ts', '.js']
+    extensions: ['.js', '.ts', '.tsx']
   },
   optimization: {
     minimize: true,
-    splitChunks: {
-      chunks: 'all'
-    }
+    splitChunks: { chunks: 'all' }
   },
   module: {
     rules: [
       {
         use: [{ loader: 'babel-loader' }],
-        test: /\.(tsx|ts|js)$/i,
+        test: /\.(js|ts|tsx)$/i,
         exclude: /node_modules/
       },
       {
-        use: [{ loader: css.loader }, { loader: 'css-loader', options: { sourceMap: false } }],
+        use: [{ loader: extract.loader }, { loader: 'css-loader', options: { sourceMap: false } }],
         test: /\.css$/i
       },
       {
-        use: [{ loader: 'file-loader', options: { outputPath: 'static/images' } }],
-        test: /\.(png|jpg|jpeg|gif|svg|webp)$/i
+        use: [{ loader: 'file-loader', options: { outputPath: 'images' } }],
+        test: /\.(gif|jpeg|jpg|png|svg|webp)$/i
       },
       {
-        use: [{ loader: 'file-loader', options: { outputPath: 'static/fonts' } }],
-        test: /\.(ttf|otf|woff|woff2)$/i
+        use: [{ loader: 'file-loader', options: { outputPath: 'fonts' } }],
+        test: /\.(otf|ttf|woff|woff2)$/i
       }
     ]
   },
   plugins: [
-    new dotenv(),
     new clean(),
     new copy([
       {
-        from: path.resolve(__dirname, 'static'),
-        to: path.resolve(__dirname, 'dist/static')
+        from: path.resolve(__dirname, 'public'),
+        to: path.resolve(__dirname, 'dist')
       }
     ]),
+    new dotenv(),
     new html({
       template: path.resolve(__dirname, 'src/index.html')
     }),
-    new css({
-      filename: 'static/css/[name].css',
-      chunkFilename: 'static/css/[id].css'
+    new extract({
+      filename: 'css/[name].css',
+      chunkFilename: 'css/[id].css'
     })
   ]
 }

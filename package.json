@@ -1,21 +1,20 @@
 {
   "private": true,
   "license": "MIT",
-  "version": "1.0.3",
-  "main": "package.json",
   "name": "frontend-boilerplate",
   "description": "A boilerplate for Web frontend development",
+  "version": "1.0.4",
   "homepage": "https://febp.now.sh/",
+  "main": "package.json",
   "scripts": {
-    "start": "webpack-dev-server --config webpack.dev.js",
+    "serve": "webpack-dev-server --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js",
-    "typecheck": "tsc --noEmit",
     "lint": "npm run typecheck && npm run lint:js && npm run lint:css",
-    "lint:js": "eslint --fix '**/*.{tsx,ts,js}'",
-    "lint:css": "stylelint --fix '**/*.{tsx,ts,js}'",
-    "test:unit": "jest",
-    "test:coverage": "jest --coverage",
-    "clean": "/bin/rm -rf node_modules && npm install"
+    "lint:js": "eslint --fix 'src/**/*.{js,ts,tsx}'",
+    "lint:css": "stylelint --fix 'src/**/*.{js,ts,tsx}'",
+    "typecheck": "tsc --noEmit",
+    "test": "jest",
+    "coverage": "jest --coverage"
   },
   "dependencies": {
     "@emotion/core": "^10.0.22",
@@ -29,14 +28,13 @@
   },
   "devDependencies": {
     "@babel/core": "^7.7.2",
-    "@babel/plugin-proposal-class-properties": "^7.7.0",
+    "@babel/plugin-proposal-class-properties": "^7.7.4",
     "@babel/plugin-proposal-object-rest-spread": "^7.6.2",
     "@babel/preset-env": "^7.7.1",
     "@babel/preset-react": "^7.7.0",
     "@babel/preset-typescript": "^7.7.2",
     "@commitlint/cli": "^8.2.0",
     "@commitlint/config-conventional": "^8.2.0",
-    "@emotion/babel-preset-css-prop": "^10.0.23",
     "@loadable/babel-plugin": "^5.10.3",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
@@ -52,16 +50,15 @@
     "babel-loader": "^8.0.6",
     "clean-webpack-plugin": "^3.0.0",
     "copy-webpack-plugin": "^5.0.5",
+    "core-js": "^3.4.2",
     "css-loader": "^3.2.0",
     "dotenv-webpack": "^1.7.0",
     "eslint": "^6.6.0",
     "eslint-config-prettier": "^6.7.0",
-    "eslint-plugin-compat": "^3.3.0",
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-jest": "^23.0.4",
     "eslint-plugin-prettier": "^3.1.1",
     "eslint-plugin-react": "^7.16.0",
-    "eslint-plugin-react-hooks": "^2.3.0",
     "eslint-plugin-security": "^1.4.0",
     "eslint-plugin-unicorn": "^13.0.0",
     "file-loader": "^4.3.0",
@@ -77,6 +74,9 @@
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.10",
     "webpack-dev-server": "^3.9.0"
+  },
+  "engines": {
+    "node": ">=10"
   },
   "author": {
     "name": "Naoya Yamashita",

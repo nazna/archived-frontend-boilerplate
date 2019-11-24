@@ -2,7 +2,7 @@
   "syntax": "css-in-js",
   "extends": [
     "stylelint-config-recommended",
-    "stylelint-config-recess-order",
-    "stylelint-config-prettier"
+    "stylelint-config-prettier",
+    "stylelint-config-recess-order"
   ]
 }
