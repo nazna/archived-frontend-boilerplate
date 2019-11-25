@@ -7,9 +7,14 @@
   "builds": [{ "src": "package.json", "use": "@now/static-build" }],
   "routes": [
     {
-      "src": "/public/(.*)",
-      "headers": { "cache-control": "immutable, s-maxage=31536000" },
-      "dest": "/public/$1"
+      "src": "/images/(.*)",
+      "dest": "/images/$1",
+      "headers": { "cache-control": "immutable, s-maxage=31536000" }
+    },
+    {
+      "src": "/js/(.*)",
+      "dest": "/js/$1",
+      "headers": { "cache-control": "immutable, s-maxage=31536000" }
     },
     {
       "src": "/(.*)",

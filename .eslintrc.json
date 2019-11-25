@@ -11,6 +11,16 @@
     "jest/globals": true,
     "node": true
   },
+  "plugins": [
+    "@typescript-eslint",
+    "import",
+    "jest",
+    "prettier",
+    "react",
+    "react-hooks",
+    "security",
+    "unicorn"
+  ],
   "extends": [
     "eslint:recommended",
     "plugin:@typescript-eslint/eslint-recommended",
@@ -31,6 +41,8 @@
     "import/order": "error",
     "import/newline-after-import": "error",
     "react/prop-types": "off",
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
     "unicorn/prevent-abbreviations": "off",
     "@typescript-eslint/explicit-function-return-type": "off"
   },

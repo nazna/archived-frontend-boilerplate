@@ -4,7 +4,8 @@ module.exports = api => {
   const presets = [
     ['@babel/preset-env', { corejs: 3, targets: { esmodules: true }, useBuiltIns: 'usage' }],
     ['@babel/preset-react'],
-    ['@babel/preset-typescript']
+    ['@babel/preset-typescript'],
+    ['@emotion/babel-preset-css-prop']
   ]
 
   const plugins = [

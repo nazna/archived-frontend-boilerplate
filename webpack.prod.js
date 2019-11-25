@@ -3,7 +3,6 @@
 const path = require('path')
 const { CleanWebpackPlugin: clean } = require('clean-webpack-plugin')
 const copy = require('copy-webpack-plugin')
-const dotenv = require('dotenv-webpack')
 const html = require('html-webpack-plugin')
 const extract = require('mini-css-extract-plugin')
 
@@ -53,7 +52,6 @@ module.exports = {
         to: path.resolve(__dirname, 'dist')
       }
     ]),
-    new dotenv(),
     new html({
       template: path.resolve(__dirname, 'src/index.html')
     }),
