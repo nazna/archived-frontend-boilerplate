@@ -3,7 +3,34 @@
   <sup align="center">A boilerplate for Web frontend development</sup>
 </div>
 
-## Development
+<p>
+  <a href="https://github.com/naoya3e/frontend-boilerplate/actions?query=workflow%3ABuild">
+    <img src="https://github.com/naoya3e/frontend-boilerplate/workflows/Build/badge.svg" target="_blank" rel="noopener noreferrer">
+  </a>
+  <a href="https://dependabot.com/">
+    <img src="https://flat.badgen.net/badge/i/dependabot/0366d6?icon=dependabot&label" target="_blank" rel="noopener noreferrer">
+  </a>
+  <a href="https://www.typescriptlang.org/">
+    <img src="https://flat.badgen.net/badge/i/TypeScript/017acd?icon=typescript&label" target="_blank" rel="noopener noreferrer">
+  </a>
+  <a href="https://zeit.co">
+    <img src="https://flat.badgen.net/badge/i/now/000000?icon=now&label" target="_blank" rel="noopener noreferrer">
+  </a>
+  <a href="https://eslint.org">
+    <img src="https://flat.badgen.net/badge/linter/eslint/4b32c3" target="_blank" rel="noopener noreferrer">
+  </a>
+  <a href="https://stylelint.io/">
+    <img src="https://flat.badgen.net/badge/linter/stylelint/263238" target="_blank" rel="noopener noreferrer">
+  </a>
+  <a href="https://prettier.io">
+    <img src="https://flat.badgen.net/badge/formatter/prettier/ff69b4" target="_blank" rel="noopener noreferrer">
+  </a>
+  <a href="https://emotion.sh">
+    <img src="https://flat.badgen.net/badge/styling/emotion/d36ac2" target="_blank" rel="noopener noreferrer">
+  </a>
+</p>
+
+## Usage
 
 ```sh
 git clone git@github.com:naoya3e/frontend-boilerplate
@@ -11,12 +38,6 @@ cd .env.example .env
 npm install
 npm run serve
 ```
-
-## Demo
-
-[frontend-boilerplate](https://febp.now.sh/)
-
-This project is running on Zeit Now.
 
 ## Todos
 
