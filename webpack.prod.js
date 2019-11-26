@@ -52,12 +52,12 @@ module.exports = {
         to: path.resolve(__dirname, 'dist')
       }
     ]),
+    new extract({
+      filename: 'css/[name]-[contenthash].css',
+      chunkFilename: 'css/[id]-[contenthash].css'
+    }),
     new html({
       template: path.resolve(__dirname, 'src/index.html')
-    }),
-    new extract({
-      filename: 'css/[name].css',
-      chunkFilename: 'css/[id].css'
     })
   ]
 }

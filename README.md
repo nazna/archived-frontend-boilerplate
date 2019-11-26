@@ -1,9 +1,8 @@
-<div align="center">
-  <h1 align="center">frontend-boilerplate</h1>
-  <sup align="center">A boilerplate for Web frontend development</sup>
-</div>
+# frontend-boilerplate
 
-<p>
+> A boilerplate for Web frontend development
+
+<p style="margin-top:8px;text-align=center">
   <a href="https://github.com/naoya3e/frontend-boilerplate/actions?query=workflow%3ABuild">
     <img src="https://github.com/naoya3e/frontend-boilerplate/workflows/Build/badge.svg" target="_blank" rel="noopener noreferrer">
   </a>
