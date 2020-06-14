@@ -1,10 +1,6 @@
 {
-  "eslint.autoFixOnSave": true,
+  "editor.codeActionsOnSave": { "source.fixAll": true },
+  "editor.formatOnSave": true,
   "eslint.enable": true,
-  "eslint.validate": [
-    {"language": "javascript", "autoFix": true},
-    {"language": "javascriptreact", "autoFix": true},
-    {"language": "typescript", "autoFix": true },
-    {"language": "typescriptreact", "autoFix": true }
-  ]
+  "stylelint.enable": true
 }
