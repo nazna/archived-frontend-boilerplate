@@ -46,18 +46,13 @@ module.exports = {
   },
   plugins: [
     new clean(),
-    new copy([
-      {
-        from: path.resolve(__dirname, 'public'),
-        to: path.resolve(__dirname, 'dist')
-      }
-    ]),
+    new copy({
+      patterns: [{ from: path.resolve(__dirname, 'public'), to: path.resolve(__dirname, 'dist') }]
+    }),
     new extract({
       filename: 'css/[name]-[contenthash].css',
       chunkFilename: 'css/[id]-[contenthash].css'
     }),
-    new html({
-      template: path.resolve(__dirname, 'src/index.html')
-    })
+    new html({ template: path.resolve(__dirname, 'src/index.html') })
   ]
 }

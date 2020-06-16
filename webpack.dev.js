@@ -42,19 +42,14 @@ module.exports = {
     ]
   },
   plugins: [
-    new copy([
-      {
-        from: path.resolve(__dirname, 'public'),
-        to: path.resolve(__dirname, 'dist')
-      }
-    ]),
+    new copy({
+      patterns: [{ from: path.resolve(__dirname, 'public'), to: path.resolve(__dirname, 'dist') }]
+    }),
     new extract({
       filename: 'css/[name].css',
       chunkFilename: 'css/[id].css'
     }),
-    new html({
-      template: path.resolve(__dirname, 'src/index.html')
-    })
+    new html({ template: path.resolve(__dirname, 'src/index.html') })
   ],
   devServer: {
     contentBase: path.resolve(__dirname, 'public'),
