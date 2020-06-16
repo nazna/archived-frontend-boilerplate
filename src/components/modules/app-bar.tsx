@@ -2,7 +2,7 @@ import React from 'react'
 import styled from '@emotion/styled'
 import { Link } from 'react-router-dom'
 
-export function AppBar() {
+export const AppBar = (): JSX.Element => {
   return (
     <Container>
       <div>{process.env.PROJECT_NAME}</div>

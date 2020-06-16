@@ -6,7 +6,7 @@ type Props = {
   todo: Todo
 }
 
-export function TodoItem(props: Props) {
+export const TodoItem = (props: Props): JSX.Element => {
   const handleToggle = () => toggle(props.todo.id)
 
   return (
@@ -39,7 +39,7 @@ const Checkbox = styled.input`
 
 const Text = styled.label<{ completed: Todo['completed'] }>`
   flex-grow: 1;
-  color: ${props => (props.completed ? '#ccc' : '#333')};
+  color: ${(props) => (props.completed ? '#ccc' : '#333')};
   user-select: none;
   transition: all 0.12s;
 `

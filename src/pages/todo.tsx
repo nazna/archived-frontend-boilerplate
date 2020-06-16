@@ -5,16 +5,18 @@ import { PageHeader } from '../components/abstracts/page-header'
 import { TodoItem } from '../components/modules/todo-item'
 import { todoStore } from '../store/todo'
 
-export default function Todo() {
+export default function Todo(): JSX.Element {
   const todos = useStore(todoStore)
 
   return (
     <React.Fragment>
       <PageHeader>Todo</PageHeader>
       <PageBody>
-        {todos.map(todo => (
-          <TodoItem key={todo.id} todo={todo} />
-        ))}
+        {todos.map(
+          (todo): JSX.Element => (
+            <TodoItem key={todo.id} todo={todo} />
+          )
+        )}
       </PageBody>
     </React.Fragment>
   )

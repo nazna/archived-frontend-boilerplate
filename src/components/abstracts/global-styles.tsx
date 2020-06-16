@@ -52,6 +52,6 @@ const styles = css`
   }
 `
 
-export function GlobalStyles() {
+export const GlobalStyles = (): JSX.Element => {
   return <Global styles={styles} />
 }

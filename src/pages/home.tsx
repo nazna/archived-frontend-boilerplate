@@ -3,7 +3,7 @@ import { Link, useLocation } from 'react-router-dom'
 import { PageBody } from '../components/abstracts/page-body'
 import { PageHeader } from '../components/abstracts/page-header'
 
-export default function Home() {
+export default function Home(): JSX.Element {
   const location = useLocation()
 
   return (

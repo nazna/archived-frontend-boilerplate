@@ -3,7 +3,7 @@ import styled from '@emotion/styled'
 import { PageBody } from '../components/abstracts/page-body'
 import { PageHeader } from '../components/abstracts/page-header'
 
-export default function NotFound() {
+export default function NotFound(): JSX.Element {
   return (
     <React.Fragment>
       <PageHeader>NotFound</PageHeader>
