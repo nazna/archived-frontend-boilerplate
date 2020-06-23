@@ -1,8 +1,8 @@
 # frontend-boilerplate
 
-> A boilerplate for Web frontend development
+> A boilerplate for Web frontend development [febp.now.sh](https://febp.now.sh/)
 
-![github actions](https://github.com/nazna/frontend-boilerplate/workflows/Build/badge.svg)
+![github actions](https://github.com/nazna/frontend-boilerplate/workflows/check%20pull-request/badge.svg)
 ![dependabot](https://flat.badgen.net/badge/i/dependabot/0366d6?icon=dependabot&label)
 ![typescript](https://flat.badgen.net/badge/i/TypeScript/017acd?icon=typescript&label)
 ![zeit/now](https://flat.badgen.net/badge/i/zeit%2Fnow/000000?icon=now&label)
@@ -16,10 +16,6 @@
 ```sh
 git clone git@github.com:naoya3e/frontend-boilerplate
 npm install
-npm run serve
+npm run dev
 ```
 
-## Todos
-
-- [ ] GitHub Actions を統一して jobs if を利用するように変更する
-- [ ] actions/zeit-now が 404 になって削除されたみたいなので修正する
