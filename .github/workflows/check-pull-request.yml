@@ -1,10 +1,11 @@
-name: check pull-request
+name: check-pull-request
 
 on: pull_request
 
 env:
   CI: true
   TZ: Asia/Tokyo
+
 jobs:
   dump:
     runs-on: ubuntu-latest
