@@ -4,7 +4,7 @@
   "name": "frontend-boilerplate",
   "description": "A boilerplate for Web frontend development",
   "version": "1.0.4",
-  "homepage": "https://febp.now.sh",
+  "homepage": "https://febp.vercel.app",
   "main": "package.json",
   "scripts": {
     "dev": "webpack-dev-server --config webpack.dev.js",
@@ -24,7 +24,8 @@
     "effector-react": "^20.8.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-router-dom": "^5.2.0"
+    "react-router-dom": "^5.2.0",
+    "vercel": "^19.1.1"
   },
   "devDependencies": {
     "@babel/core": "^7.10.3",

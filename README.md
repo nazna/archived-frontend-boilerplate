@@ -1,6 +1,6 @@
 # frontend-boilerplate
 
-> A boilerplate for Web frontend development | [febp.now.sh](https://febp.now.sh/)
+> A boilerplate for Web frontend development | [febp.vercel.app](https://febp.vercel.app/)
 
 ![github actions](https://github.com/nazna/frontend-boilerplate/workflows/check-pull-request/badge.svg)
 ![dependabot](https://flat.badgen.net/badge/i/dependabot/0366d6?icon=dependabot&label)
@@ -14,7 +14,7 @@
 ## Usage
 
 ```sh
-git clone git@github.com:naoya3e/frontend-boilerplate
+git clone git@github.com:nazna/frontend-boilerplate
 npm install
 npm run dev
 ```
