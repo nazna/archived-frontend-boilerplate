@@ -1,13 +1,15 @@
-name: check-pull-request
+name: deploy-monthly
 
-on: pull_request
+on:
+  schedule:
+    - cron: '0 0 * * 1'
 
 env:
   CI: true
   TZ: Asia/Tokyo
 
 jobs:
-  check:
+  deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -15,7 +17,7 @@ jobs:
         with:
           node-version: 12
       - run: npm install
-      - run: npm run lint:js
-      - run: npm run lint:css
-      - run: npm run typecheck
       - run: npm run build
+      - run: vercel deploy dist --prod --no-clipboard --token=$TOKEN
+        env:
+          TOKEN: ${{ secrets.VERCEL_TOKEN }}
