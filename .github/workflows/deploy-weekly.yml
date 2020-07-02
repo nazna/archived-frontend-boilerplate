@@ -1,4 +1,4 @@
-name: deploy-monthly
+name: deploy-weekly
 
 on:
   schedule:
