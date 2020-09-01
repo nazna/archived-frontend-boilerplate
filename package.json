@@ -62,7 +62,7 @@
     "eslint-plugin-react-hooks": "^4.1.0",
     "eslint-plugin-security": "^1.4.0",
     "eslint-plugin-unicorn": "^21.0.0",
-    "file-loader": "^6.0.0",
+    "file-loader": "^6.1.0",
     "html-webpack-plugin": "^4.4.1",
     "husky": "^4.2.5",
     "jest": "^26.4.2",
