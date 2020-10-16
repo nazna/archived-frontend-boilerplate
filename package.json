@@ -23,7 +23,7 @@
     "effector": "^20.17.2",
     "effector-react": "^20.9.0",
     "react": "^16.14.0",
-    "react-dom": "^16.13.1",
+    "react-dom": "^16.14.0",
     "react-router-dom": "^5.2.0"
   },
   "devDependencies": {
