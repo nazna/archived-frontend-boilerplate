@@ -1,6 +1,15 @@
 {
-  "editor.codeActionsOnSave": { "source.fixAll": true },
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": true,
+    "source.fixAll": true
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
-  "eslint.enable": true,
-  "stylelint.enable": true
+  "editor.rulers": [120],
+  "search.exclude": {
+    "package-lock.json": true,
+    "**/node_modules": true,
+    "**/.next": true
+  },
+  "typescript.preferences.importModuleSpecifier": "relative"
 }

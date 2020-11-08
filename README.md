@@ -18,3 +18,11 @@ git clone git@github.com:nazna/frontend-boilerplate
 npm install
 npm run dev
 ```
+
+## Logs
+
+### v2.0.0
+
+- Next.js の Incremental Static Regeneration を導入
+  - ルーティングの実装がなくなったため react-router-dom を使っていたコードを参照するには [09eec65](https://github.com/nazna/frontend-boilerplate/commit/09eec65415e9c03ec7483e888b07268499ce1ffa)
+- State 管理を Effector から Recoil に変更
