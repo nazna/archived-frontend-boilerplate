@@ -38,7 +38,7 @@
     "@emotion/babel-preset-css-prop": "^10.2.1",
     "@loadable/babel-plugin": "^5.13.2",
     "@testing-library/jest-dom": "^5.11.6",
-    "@testing-library/react": "^11.2.1",
+    "@testing-library/react": "^11.2.2",
     "@types/jest": "^26.0.15",
     "@types/loadable__component": "^5.13.1",
     "@types/node": "^14.14.9",
