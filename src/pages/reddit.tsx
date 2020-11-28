@@ -1,12 +1,23 @@
-import React from 'react'
-import { PageBody } from '../components/abstracts/page-body'
-import { PageHeader } from '../components/abstracts/page-header'
+import { useRecoilValueLoadable } from 'recoil'
+import { RedditFilter } from '../components/reddit-filter'
+import { RedditItem } from '../components/reddit-item'
+import { TopNav } from '../components/top-nav'
+import { selectedRedditState } from '../states/reddit'
 
-export default function Reddit(): JSX.Element {
+export default function Reddit() {
+  const subreddit = useRecoilValueLoadable(selectedRedditState)
+
   return (
-    <React.Fragment>
-      <PageHeader>Reddit</PageHeader>
-      <PageBody>Reddit</PageBody>
-    </React.Fragment>
+    <>
+      <TopNav />
+      <section>
+        <h2>reddit</h2>
+        <RedditFilter />
+        {subreddit.state === 'loading' && 'Loading...'}
+        {subreddit.state === 'hasError' && 'Error occured'}
+        {subreddit.state === 'hasValue' &&
+          subreddit.contents.data.children.map((item: any) => <RedditItem key={item.data.id} item={item} />)}
+      </section>
+    </>
   )
 }

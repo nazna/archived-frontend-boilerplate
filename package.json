@@ -1,89 +1,39 @@
 {
-  "private": true,
-  "license": "MIT",
   "name": "frontend-boilerplate",
   "description": "A boilerplate for Web frontend development",
-  "version": "1.0.4",
-  "homepage": "https://febp.vercel.app",
-  "main": "package.json",
+  "version": "2.0.0",
+  "author": "nazna <naoya3e@gmail.com> (https://github.com/nazna)",
+  "license": "MIT",
+  "private": true,
   "scripts": {
-    "dev": "webpack-dev-server --config webpack.dev.js",
-    "build": "webpack --config webpack.prod.js",
-    "lint": "npm run typecheck && npm run lint:js && npm run lint:css",
-    "lint:js": "eslint --fix 'src/**/*.{js,ts,tsx}'",
-    "lint:css": "stylelint --fix 'src/**/*.{js,ts,tsx}'",
+    "dev": "next dev",
+    "start": "next start",
+    "build": "next build",
+    "lint": "npm run typecheck && npm run format",
     "typecheck": "tsc --noEmit",
-    "test": "jest",
-    "coverage": "jest --coverage"
+    "format": "prettier --write ."
   },
   "dependencies": {
-    "@emotion/core": "^10.1.1",
-    "@emotion/styled": "^10.0.27",
-    "@loadable/component": "^5.14.1",
-    "effector": "^20.17.2",
-    "effector-react": "^20.9.0",
-    "react": "^16.14.0",
-    "react-dom": "^16.14.0",
-    "react-router-dom": "^5.2.0"
+    "next": "^10.0.3",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "recoil": "^0.1.2"
   },
   "devDependencies": {
-    "@babel/core": "^7.12.9",
-    "@babel/plugin-proposal-class-properties": "^7.12.1",
-    "@babel/plugin-proposal-object-rest-spread": "^7.12.1",
-    "@babel/preset-env": "^7.12.7",
-    "@babel/preset-react": "^7.12.7",
-    "@babel/preset-typescript": "^7.12.7",
     "@commitlint/cli": "^11.0.0",
     "@commitlint/config-conventional": "^11.0.0",
-    "@emotion/babel-preset-css-prop": "^10.2.1",
-    "@loadable/babel-plugin": "^5.13.2",
-    "@testing-library/jest-dom": "^5.11.6",
-    "@testing-library/react": "^11.2.2",
-    "@types/jest": "^26.0.15",
-    "@types/loadable__component": "^5.13.1",
     "@types/node": "^14.14.10",
-    "@types/react": "^16.9.56",
-    "@types/react-dom": "^16.9.9",
-    "@types/react-router-dom": "^5.1.6",
-    "@types/webpack": "^4.41.25",
-    "@typescript-eslint/eslint-plugin": "^4.0.0",
-    "@typescript-eslint/parser": "^3.10.1",
-    "babel-loader": "^8.2.2",
-    "clean-webpack-plugin": "^3.0.0",
-    "copy-webpack-plugin": "^6.3.2",
-    "core-js": "^3.8.0",
-    "css-loader": "^5.0.1",
-    "eslint": "^7.14.0",
-    "eslint-config-prettier": "^6.15.0",
-    "eslint-plugin-import": "^2.22.1",
-    "eslint-plugin-jest": "^24.1.3",
-    "eslint-plugin-prettier": "^3.1.4",
-    "eslint-plugin-react": "^7.21.5",
-    "eslint-plugin-react-hooks": "^4.2.0",
-    "eslint-plugin-security": "^1.4.0",
-    "eslint-plugin-unicorn": "^23.0.0",
-    "file-loader": "^6.2.0",
-    "html-webpack-plugin": "^4.5.0",
+    "@types/react": "^17.0.0",
     "husky": "^4.3.0",
-    "jest": "^26.6.3",
-    "mini-css-extract-plugin": "^1.3.1",
-    "prettier": "^2.2.0",
-    "stylelint": "^13.8.0",
-    "stylelint-config-prettier": "^8.0.2",
-    "stylelint-config-recess-order": "^2.3.0",
-    "stylelint-config-recommended": "^3.0.0",
-    "typescript": "^4.1.2",
-    "webpack": "^4.44.2",
-    "webpack-cli": "^4.2.0",
-    "webpack-dev-server": "^3.11.0"
+    "prettier": "^2.2.1",
+    "typescript": "^4.1.2"
   },
   "engines": {
-    "node": ">=10"
+    "node": "14.x"
   },
-  "author": "nazna <naoya3e@gmail.com> (https://github.com/nazna)",
   "repository": {
     "type": "git",
-    "url": "https://github.com/nazna/frontend-boilerplate"
+    "url": "git+ssh://git@github.com/nazna/frontend-boilerplate.git"
   },
   "bugs": {
     "url": "https://github.com/nazna/frontend-boilerplate/issues"
@@ -98,5 +48,13 @@
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
       "pre-commit": "npm run lint"
     }
+  },
+  "prettier": {
+    "printWidth": 120,
+    "semi": false,
+    "singleQuote": true
+  },
+  "volta": {
+    "node": "14.15.0"
   }
 }

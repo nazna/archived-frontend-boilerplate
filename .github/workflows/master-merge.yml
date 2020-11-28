@@ -1,7 +1,8 @@
-name: deploy-weekly
+name: master-merge
 on:
-  schedule:
-    - cron: '0 0 * * 1'
+  push:
+    branches:
+      - master
 env:
   CI: true
   TZ: Asia/Tokyo
@@ -24,14 +25,3 @@ jobs:
           node-version: '14.x'
       - run: npm ci
       - run: npm run build
-  deploy:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2-beta
-        with:
-          node-version: '14.x'
-      - run: npm ci
-      - run: npx vercel deploy --prod --no-clipboard --confirm --token=$TOKEN
-        env:
-          TOKEN: ${{ secrets.VERCEL_TOKEN }}

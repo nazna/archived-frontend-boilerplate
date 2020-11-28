@@ -1,7 +1,9 @@
-.dependabot
 .github
+.next
+.vercel
 .vscode
+node_modules
 .editorconfig
-.env.example
+.gitignore
 LICENSE
 README.md
